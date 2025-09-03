@@ -1,0 +1,19 @@
+Contact: mailto:security@vjoseph.com
+Expires: 2025-12-31T23:59:59.000Z
+Encryption: https://vjoseph.com/pgp-key.txt
+Acknowledgments: https://vjoseph.com/security-acknowledgments
+Preferred-Languages: pt, en
+Canonical: https://vjoseph.com/.well-known/security.txt
+Policy: https://vjoseph.com/security-policy
+
+# VJOSEPH Security Policy
+# 
+# Se você encontrou uma vulnerabilidade de segurança, por favor:
+# 1. NÃO divulgue publicamente
+# 2. Entre em contato via security@vjoseph.com
+# 3. Aguarde nossa resposta antes de tomar qualquer ação
+# 4. Forneça detalhes suficientes para reproduzir o problema
+#
+# Recompensas podem ser oferecidas para vulnerabilidades críticas.
+# 
+# Obrigado por ajudar a manter a VJOSEPH segura!

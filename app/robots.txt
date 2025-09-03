@@ -1,0 +1,86 @@
+User-agent: *
+Allow: /
+
+# Bloquear bots maliciosos
+User-agent: sqlmap
+Disallow: /
+
+User-agent: nikto
+Disallow: /
+
+User-agent: nmap
+Disallow: /
+
+User-agent: masscan
+Disallow: /
+
+User-agent: zap
+Disallow: /
+
+User-agent: burp
+Disallow: /
+
+User-agent: w3af
+Disallow: /
+
+User-agent: acunetix
+Disallow: /
+
+User-agent: nessus
+Disallow: /
+
+User-agent: openvas
+Disallow: /
+
+User-agent: havij
+Disallow: /
+
+User-agent: sqlninja
+Disallow: /
+
+User-agent: pangolin
+Disallow: /
+
+User-agent: bsqlbf
+Disallow: /
+
+User-agent: jsql
+Disallow: /
+
+User-agent: sqlsus
+Disallow: /
+
+User-agent: marathon
+Disallow: /
+
+User-agent: absinthe
+Disallow: /
+
+User-agent: sqldumper
+Disallow: /
+
+User-agent: sqlpowerinjector
+Disallow: /
+
+User-agent: sqlbf
+Disallow: /
+
+# Bloquear paths sensíveis
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /administrator/
+Disallow: /phpmyadmin/
+Disallow: /.env
+Disallow: /config/
+Disallow: /backup/
+Disallow: /test/
+Disallow: /debug/
+Disallow: /api/v1/admin/
+Disallow: /.git/
+Disallow: /.svn/
+Disallow: /crossdomain.xml
+Disallow: /clientaccesspolicy.xml
+
+# Sitemap
+Sitemap: https://vjoseph.com/sitemap.xml
