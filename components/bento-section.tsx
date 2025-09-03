@@ -36,28 +36,28 @@ const BentoCard = ({ title, description, Component }) => (
 export function BentoSection() {
   const cards = [
     {
-      title: "AI-powered code reviews.",
-      description: "Get real-time, smart suggestions for cleaner code.",
+      title: "Joseph Link",
+      description: "Seu cartão de visitas inteligente. Centralize seus links e contatos em um único lugar.",
       Component: AiCodeReviews,
     },
     {
-      title: "Real-time coding previews",
-      description: "Chat, collaborate, and instantly preview changes together.",
+      title: "Joseph Meet",
+      description: "Seu recepcionista digital. Agendamentos automáticos com pagamento, lembrete e integração com WhatsApp.",
       Component: RealtimeCodingPreviews,
     },
     {
-      title: "One-click integrations",
-      description: "Easily connect your workflow with popular dev tools.",
+      title: "Joseph Bot",
+      description: "Seu atendente 24h. Responde clientes, agenda compromissos e nunca perde uma oportunidade.",
       Component: OneClickIntegrationsIllustration,
     },
     {
-      title: "Flexible MCP connectivity",
-      description: "Effortlessly manage and configure MCP server access.",
+      title: "Joseph Board",
+      description: "Seu painel de gestão inteligente. Relatórios automáticos que chegam todo mês, sem esforço.",
       Component: MCPConnectivityIllustration, // Updated component
     },
     {
-      title: "Launch parallel coding agents", // Swapped position
-      description: "Solve complex problems faster with multiple AI agents.",
+      title: "Trabalhar mais não é a solução. Trabalhar melhor é.",
+      description: "Com a VJOSEPH, você não ganha apenas automação. Você ganha tempo de vida. Cada Joseph é um funcionário que não erra, não atrasa e nunca dorme.",
       Component: ParallelCodingAgents, // Updated component
     },
     {
@@ -74,11 +74,11 @@ export function BentoSection() {
         <div className="self-stretch py-8 md:py-14 flex flex-col justify-center items-center gap-2 z-10">
           <div className="flex flex-col justify-start items-center gap-4">
             <h2 className="w-full max-w-[655px] text-center text-foreground text-4xl md:text-6xl font-semibold leading-tight md:leading-[66px]">
-              Empower Your Workflow with AI
+              Mais tempo. Mais dinheiro. Mais vida.
             </h2>
             <p className="w-full max-w-[600px] text-center text-muted-foreground text-lg md:text-xl font-medium leading-relaxed">
-              Ask your AI Agent for real-time collaboration, seamless integrations, and actionable insights to
-              streamline your operations.
+              Os Josephs são funcionários digitais criados para executar tarefas repetitivas com precisão.
+              Enquanto eles trabalham, você foca no que realmente importa: crescer, criar e viver.
             </p>
           </div>
         </div>
