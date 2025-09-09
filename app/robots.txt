@@ -1,0 +1,76 @@
+User-agent: *
+Allow: /
+
+# Bloquear bots maliciosos
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+# Bloquear scanners de vulnerabilidade
+User-agent: sqlmap
+Disallow: /
+
+User-agent: nikto
+Disallow: /
+
+User-agent: nmap
+Disallow: /
+
+User-agent: masscan
+Disallow: /
+
+User-agent: zap
+Disallow: /
+
+User-agent: burp
+Disallow: /
+
+User-agent: w3af
+Disallow: /
+
+User-agent: acunetix
+Disallow: /
+
+User-agent: nessus
+Disallow: /
+
+User-agent: openvas
+Disallow: /
+
+User-agent: havij
+Disallow: /
+
+User-agent: sqlninja
+Disallow: /
+
+# Sitemap
+Sitemap: https://vjoseph.com/sitemap.xml
