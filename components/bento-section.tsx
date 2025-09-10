@@ -16,7 +16,7 @@ interface BentoCardProps {
 
 const BentoCard = ({ title, description, Component, href, isClickable = false }: BentoCardProps) => {
   const cardContent = (
-    <div className="overflow-hidden rounded-2xl border border-white/20 flex flex-col justify-start items-start relative group">
+    <div className="overflow-hidden rounded-2xl border border-white/20 flex flex-col justify-start items-start relative group h-[420px]">
       {/* Background with blur effect */}
       <div
         className="absolute inset-0 rounded-2xl"
@@ -33,7 +33,7 @@ const BentoCard = ({ title, description, Component, href, isClickable = false }:
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       )}
 
-      <div className="self-stretch p-6 flex flex-col justify-start items-start gap-2 relative z-10">
+      <div className="self-stretch p-6 flex flex-col justify-start items-start gap-2 relative z-10 flex-1">
         <div className="self-stretch flex flex-col justify-start items-start gap-1.5">
           <p className="self-stretch text-foreground text-lg font-normal leading-7">
             {title} <br />
@@ -41,9 +41,19 @@ const BentoCard = ({ title, description, Component, href, isClickable = false }:
           </p>
         </div>
       </div>
-      <div className="self-stretch h-72 relative -mt-0.5 z-10">
+      <div className="self-stretch h-64 relative z-10 flex-shrink-0">
         <Component />
       </div>
+      
+      {/* Professional Access Button */}
+      {isClickable && (
+        <div className="absolute bottom-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+          <div className="bg-primary/90 hover:bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium shadow-lg backdrop-blur-sm border border-primary/20">
+            Acessar
+          </div>
+        </div>
+      )}
+      
       {/* Click indicator */}
       {isClickable && (
         <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -99,15 +109,15 @@ export function BentoSection() {
       isClickable: true,
     },
     {
-      title: "Trabalhar mais não é a solução. Trabalhar melhor é.",
-      description: "Com a VJOSEPH, você não ganha apenas automação. Você ganha tempo de vida. Cada Joseph é um funcionário que não erra, não atrasa e nunca dorme.",
+      title: "Joseph Flow",
+      description: "Seu fluxo de trabalho inteligente. Automatize processos complexos e ganhe eficiência em cada etapa do seu negócio.",
       Component: ParallelCodingAgents, // Updated component
       href: "/joseph/flow",
       isClickable: true,
     },
     {
-      title: "Deployment made easy", // Swapped position
-      description: "Go from code to live deployment on Vercel instantly.",
+      title: "Joseph Guard",
+      description: "Sua segurança digital. Proteja seus dados e processos com monitoramento inteligente e alertas automáticos.",
       Component: EasyDeployment,
       href: "/joseph/guard",
       isClickable: true,

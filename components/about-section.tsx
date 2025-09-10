@@ -20,8 +20,8 @@ export function AboutSection() {
           <div className="flex flex-col justify-start items-center gap-4">
                          <div className="w-20 h-20 relative rounded-full overflow-hidden">
                <Image
-                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face"
-                 alt="Thomas - Fundador & Estrategista"
+                 src="/images/thomas-vidal-foto.jpeg"
+                 alt="Thomas J. Vidal - Fundador & Estrategista"
                  width={80}
                  height={80}
                  className="w-full h-full object-cover"
@@ -42,20 +42,21 @@ export function AboutSection() {
         <div className="flex-1 p-6 overflow-hidden rounded-xl flex flex-col justify-start items-center gap-6 bg-gradient-to-b from-gray-50/5 to-gray-50/0 outline outline-1 outline-border outline-offset-[-1px] hover:shadow-[0px_4px_8px_-2px_rgba(0,0,0,0.10)] transition-all duration-300">
           <div className="flex flex-col justify-start items-center gap-4">
                          <div className="w-20 h-20 relative rounded-full overflow-hidden">
-               <Image
-                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-                 alt="Nicollas - Sócio Conselheiro & Investidor"
-                 width={80}
-                 height={80}
-                 className="w-full h-full object-cover"
-               />
+                <Image
+                  src="/images/nicollas-foto.jpg"
+                  alt="Nicollas Beltrão - Sócio Conselheiro & Investidor"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-cover object-center object-top"
+                  style={{ objectPosition: 'center top' }}
+                />
              </div>
             <div className="text-center">
               <h3 className="text-foreground text-xl font-semibold leading-6 mb-2">
                 Nicollas – Sócio Conselheiro & Investidor
               </h3>
               <p className="text-muted-foreground text-sm font-normal leading-relaxed">
-                Baseado nos Estados Unidos, atua como conselheiro e investidor da VJOSEPH. Apoia a expansão global da empresa e orienta a evolução para um ecossistema sustentável e bilionário.
+                Baseado nos Estados Unidos, atua como conselheiro e investidor-anjo da VJOSEPH. Apoia a expansão global da empresa e orienta a evolução para um ecossistema sustentável e bilionário.
               </p>
             </div>
           </div>
