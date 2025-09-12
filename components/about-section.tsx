@@ -56,7 +56,7 @@ export function AboutSection() {
                 Nicollas – Sócio Conselheiro & Investidor
               </h3>
               <p className="text-muted-foreground text-sm font-normal leading-relaxed">
-                Baseado nos Estados Unidos, atua como conselheiro e investidor-anjo da VJOSEPH. Apoia a expansão global da empresa e orienta a evolução para um ecossistema sustentável e bilionário.
+                Baseado nos Estados Unidos, atua como conselheiro e investidor-anjo da VJOSEPH. Apoia a expansão global da empresa e orienta a evolução para um ecossistema sustentável.
               </p>
             </div>
           </div>

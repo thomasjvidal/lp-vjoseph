@@ -8,10 +8,10 @@ import Link from "next/link"
 
 export function Header() {
   const navItems = [
-    { name: "Soluções", href: "#features-section" },
     { name: "Produtos", href: "#features-section" },
     { name: "Planos", href: "#pricing-section" },
     { name: "Clientes", href: "#testimonials-section" },
+    { name: "Sobre Nós", href: "#about-section" },
   ]
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -44,11 +44,6 @@ export function Header() {
           </nav>
         </div>
         <div className="flex items-center gap-4">
-          <Link href="https://vercel.com/home" target="_blank" rel="noopener noreferrer" className="hidden md:block">
-            <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-6 py-2 rounded-full font-medium shadow-sm">
-              Contato
-            </Button>
-          </Link>
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
@@ -72,11 +67,6 @@ export function Header() {
                       {item.name}
                     </Link>
                   ))}
-                  <Link href="https://vercel.com/home" target="_blank" rel="noopener noreferrer" className="w-full mt-4">
-                    <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-6 py-2 rounded-full font-medium shadow-sm">
-                      Contato
-                    </Button>
-                  </Link>
                 </nav>
               </SheetContent>
             </Sheet>

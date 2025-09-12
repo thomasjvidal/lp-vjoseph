@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import type { ReactNode } from "react"
+import { useState, useEffect } from "react"
 
 interface AnimatedSectionProps {
   children: ReactNode
@@ -11,6 +12,21 @@ interface AnimatedSectionProps {
 }
 
 export function AnimatedSection({ children, className, delay = 0, id }: AnimatedSectionProps) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Durante a hidratação, renderiza sem animação para evitar mismatch
+  if (!mounted) {
+    return (
+      <div id={id} className={className}>
+        {children}
+      </div>
+    )
+  }
+
   return (
     <motion.div
       id={id}
