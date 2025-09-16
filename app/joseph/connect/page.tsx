@@ -193,7 +193,6 @@ export default function JosephConnectPage() {
 
       <FinalCTASection
         title="Pronto para ter novos clientes sempre?"
-        description="Joseph Connect prospecta, conecta e qualifica leads automaticamente."
         ctaLabel="Ativar Connect"
         ctaLink="/agenda"
       />
