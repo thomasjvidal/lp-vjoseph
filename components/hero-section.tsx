@@ -439,15 +439,15 @@ export function HeroSection() {
 
       <div className="relative z-10 space-y-4 md:space-y-5 lg:space-y-6 mb-6 md:mb-7 lg:mb-9 max-w-md md:max-w-[500px] lg:max-w-[588px] mt-16 md:mt-[120px] lg:mt-[160px] px-4">
         <h1 className="text-foreground text-3xl md:text-4xl lg:text-6xl font-semibold leading-tight">
-          Liberte seu tempo com Funcionários Digitais
+         Você no comando. Seu negócio funcionando 24 horas. 
         </h1>
         <p className="text-muted-foreground text-base md:text-base lg:text-lg font-medium leading-relaxed max-w-lg mx-auto">
-          Ganhe eficiência e qualidade de vida com agentes inteligentes que trabalham 24h, automatizam processos e aumentam seu lucro.
+          Enquanto você cria, vive, cresce — Joseph trabalha e aumenta seu lucro.
         </p>
         <div className="flex justify-center pt-4">
           <Link href="https://vercel.com/home" target="_blank" rel="noopener noreferrer">
             <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8 py-3 rounded-full font-medium text-base shadow-lg ring-1 ring-white/10">
-              Agende sua demonstração
+              Ative seu Joseph hoje
             </Button>
           </Link>
         </div>

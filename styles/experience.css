@@ -1,0 +1,224 @@
+/* Estilos locais para experiência de produtos com scroll-snap */
+
+/* Container principal com scroll-snap */
+.snap-container {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+/* Seções individuais */
+.snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Melhorias de performance para scroll */
+.snap-container {
+  /* Otimização para dispositivos móveis */
+  -webkit-overflow-scrolling: touch;
+  
+  /* Suavização de scroll no macOS */
+  scroll-behavior: smooth;
+  
+  /* Prevenir overscroll em alguns navegadores */
+  overscroll-behavior: contain;
+}
+
+/* Estilos para reduzir movimento quando necessário */
+@media (prefers-reduced-motion: reduce) {
+  .snap-container {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  
+  .snap-section {
+    scroll-snap-align: none;
+  }
+}
+
+/* Estilos para dispositivos com trackpad (macOS) */
+@supports (-webkit-overflow-scrolling: touch) {
+  .snap-container {
+    /* Melhorar inércia no trackpad */
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Estilos para navegadores que suportam scroll-snap */
+@supports (scroll-snap-type: y mandatory) {
+  .snap-container {
+    scroll-snap-type: y mandatory;
+  }
+  
+  .snap-section {
+    scroll-snap-align: start;
+  }
+}
+
+/* Fallback para navegadores sem suporte a scroll-snap */
+@supports not (scroll-snap-type: y mandatory) {
+  .snap-container {
+    /* Usar JavaScript para controle de scroll */
+    scroll-behavior: smooth;
+  }
+}
+
+/* Estilos para indicadores de scroll */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.scroll-indicator-wheel {
+  width: 1.5rem;
+  height: 2.5rem;
+  border: 2px solid hsl(var(--muted-foreground));
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 0.5rem;
+}
+
+.scroll-indicator-dot {
+  width: 0.25rem;
+  height: 0.75rem;
+  background-color: hsl(var(--muted-foreground));
+  border-radius: 0.125rem;
+}
+
+/* Animações suaves para elementos de interface */
+.experience-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.experience-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.experience-scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Desabilitar animações quando reduzir movimento está ativo */
+@media (prefers-reduced-motion: reduce) {
+  .experience-fade-in,
+  .experience-slide-up,
+  .experience-scale-in {
+    animation: none;
+  }
+  
+  .scroll-indicator-dot {
+    animation: none !important;
+  }
+}
+
+/* Estilos para gradientes de nuvem */
+.cloud-gradient-primary {
+  background: radial-gradient(ellipse at 20% 20%, hsl(165, 96%, 71%, 0.15) 100%, transparent 70%),
+              radial-gradient(ellipse at 80% 80%, hsl(160, 100%, 50%, 0.08) 80%, transparent 60%),
+              radial-gradient(ellipse at 50% 50%, hsl(160, 48%, 87%, 0.12) 60%, transparent 50%);
+}
+
+.cloud-gradient-secondary {
+  background: radial-gradient(ellipse at 20% 20%, hsl(160, 14%, 93%, 0.1) 100%, transparent 70%),
+              radial-gradient(ellipse at 80% 80%, hsl(240, 2%, 25%, 0.08) 80%, transparent 60%),
+              radial-gradient(ellipse at 50% 50%, hsl(210, 11%, 7%, 0.05) 60%, transparent 50%);
+}
+
+.cloud-gradient-accent {
+  background: radial-gradient(ellipse at 20% 20%, hsl(240, 2%, 25%, 0.12) 100%, transparent 70%),
+              radial-gradient(ellipse at 80% 80%, hsl(160, 14%, 93%, 0.08) 80%, transparent 60%),
+              radial-gradient(ellipse at 50% 50%, hsl(165, 96%, 71%, 0.06) 60%, transparent 50%);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .snap-container {
+    /* Ajustes para dispositivos móveis */
+    scroll-snap-type: y mandatory;
+  }
+  
+  .scroll-indicator {
+    bottom: 1rem;
+  }
+  
+  .scroll-indicator-wheel {
+    width: 1.25rem;
+    height: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .snap-container {
+    /* Otimizações para telas muito pequenas */
+    scroll-snap-type: y mandatory;
+  }
+}
+
+/* Estilos para modo escuro (se aplicável) */
+@media (prefers-color-scheme: dark) {
+  .cloud-gradient-primary,
+  .cloud-gradient-secondary,
+  .cloud-gradient-accent {
+    /* Ajustes para modo escuro se necessário */
+    filter: brightness(0.8);
+  }
+}
+
+/* Estilos para impressão */
+@media print {
+  .snap-container {
+    scroll-snap-type: none;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .snap-section {
+    height: auto;
+    page-break-inside: avoid;
+  }
+  
+  .scroll-indicator {
+    display: none;
+  }
+}

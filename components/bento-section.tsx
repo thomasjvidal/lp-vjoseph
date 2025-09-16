@@ -95,6 +95,13 @@ export function BentoSection() {
       isClickable: true,
     },
     {
+      title: "Joseph Connect",
+      description: "Sua prospecção automática. Encontra, conecta e qualifica leads 24h por dia.",
+      Component: OneClickIntegrationsIllustration,
+      href: "/joseph/connect",
+      isClickable: true,
+    },
+    {
       title: "Joseph Bot",
       description: "Seu atendente 24h. Responde clientes, agenda compromissos e nunca perde uma oportunidade.",
       Component: OneClickIntegrationsIllustration,
