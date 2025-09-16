@@ -189,7 +189,6 @@ export default function JosephConnectPage() {
       <SocialProofSection
         number="+500"
         description="leads qualificados por mês"
-        subDescription="Prospecção que funciona 24h por dia"
       />
 
       <FinalCTASection
