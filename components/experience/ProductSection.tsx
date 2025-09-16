@@ -49,7 +49,7 @@ export function ProductSection({
   // Configurações de animação baseadas em prefers-reduced-motion
   const animationConfig = {
     duration: prefersReducedMotion ? 0 : 0.3,
-    ease: prefersReducedMotion ? 'linear' : [0.25, 0.46, 0.45, 0.94] // iOS-like easing
+    ease: prefersReducedMotion ? 'linear' as const : [0.25, 0.46, 0.45, 0.94] as const
   }
 
   // Variantes de animação para o conteúdo
@@ -266,7 +266,7 @@ export function TransitionSection({ text, className = '' }: TransitionSectionPro
           scale: 1,
           transition: {
             duration: prefersReducedMotion ? 0 : 0.6,
-            ease: [0.25, 0.46, 0.45, 0.94]
+            ease: [0.25, 0.46, 0.45, 0.94] as const
           }
         }}
         viewport={{ once: true, amount: 0.3 }}
