@@ -2,7 +2,6 @@ import { SectionSnap } from '@/components/experience/SectionSnap'
 import { ProductSection, TransitionSection } from '@/components/experience/ProductSection'
 import { Header } from '@/components/header'
 import { FooterSection } from '@/components/footer-section'
-import '../styles/experience.css'
 
 export const metadata = {
   title: "Produtos VJOSEPH – Automação Inteligente",
