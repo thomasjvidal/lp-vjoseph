@@ -24,7 +24,7 @@ export function SectionSnap({
   const [currentSection, setCurrentSection] = useState(0)
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
   const [isScrolling, setIsScrolling] = useState(false)
-  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const scrollTimeoutRef = useRef<NodeJS.Timeout>()
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')

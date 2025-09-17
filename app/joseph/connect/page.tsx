@@ -189,10 +189,12 @@ export default function JosephConnectPage() {
       <SocialProofSection
         number="+500"
         description="leads qualificados por mês"
+        subDescription="Prospecção que funciona 24h por dia"
       />
 
       <FinalCTASection
         title="Pronto para ter novos clientes sempre?"
+        description="Joseph Connect prospecta, conecta e qualifica leads automaticamente."
         ctaLabel="Ativar Connect"
         ctaLink="/agenda"
       />

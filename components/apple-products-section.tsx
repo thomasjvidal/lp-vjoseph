@@ -12,27 +12,8 @@ interface ProductBlockProps {
 
 function ProductBlock({ title, subtitle, description, ctaText, ctaLink, mockup }: ProductBlockProps) {
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-6 py-20 bg-background scroll-snap-section overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        {/* Gradient Orbs */}
-        <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-primary/15 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/3 left-1/3 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse delay-1000" />
-        
-        {/* Subtle Cloud Elements */}
-        <div className="absolute top-16 right-16 w-40 h-20 bg-white/3 rounded-full blur-xl animate-float" />
-        <div className="absolute bottom-16 left-16 w-32 h-16 bg-white/2 rounded-full blur-lg animate-float delay-500" />
-        
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-[0.02]">
-          <div className="w-full h-full" style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: '100px 100px'
-          }} />
-        </div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <div className="min-h-screen flex items-center justify-center px-6 py-20 bg-background">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Content */}
         <div className="space-y-8">
           <div className="space-y-6">
@@ -61,9 +42,8 @@ function ProductBlock({ title, subtitle, description, ctaText, ctaLink, mockup }
           <div className="relative z-10">
             {mockup}
           </div>
-          {/* Enhanced Background glow */}
+          {/* Background glow */}
           <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/5 rounded-3xl blur-3xl scale-110" />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-3xl blur-2xl scale-105" />
         </div>
       </div>
     </div>
@@ -72,38 +52,11 @@ function ProductBlock({ title, subtitle, description, ctaText, ctaLink, mockup }
 
 function TransitionBlock({ text }: { text: string }) {
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-6 bg-background overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        {/* Gradient Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/15 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/10 rounded-full blur-2xl animate-pulse delay-500" />
-        
-        {/* Cloud-like Elements */}
-        <div className="absolute top-20 left-10 w-32 h-16 bg-white/5 rounded-full blur-xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-40 h-20 bg-white/5 rounded-full blur-xl animate-float delay-700" />
-        <div className="absolute top-1/3 right-1/3 w-24 h-12 bg-white/3 rounded-full blur-lg animate-float delay-300" />
-        
-        {/* Subtle Grid Pattern */}
-        <div className="absolute inset-0 opacity-[0.02]">
-          <div className="w-full h-full" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-            backgroundSize: '50px 50px'
-          }} />
-        </div>
-      </div>
-      
-      {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <div className="space-y-6">
-          <div className="w-16 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto rounded-full" />
-          <p className="text-2xl lg:text-4xl text-foreground leading-relaxed font-medium">
+    <div className="min-h-screen flex items-center justify-center px-6 bg-background">
+      <div className="max-w-4xl mx-auto text-center">
+        <p className="text-2xl lg:text-3xl text-muted-foreground leading-relaxed">
           {text}
         </p>
-          <div className="w-16 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto rounded-full" />
-        </div>
-        
       </div>
     </div>
   )
@@ -367,7 +320,7 @@ function BoardMockup() {
 
 export function AppleProductsSection() {
   return (
-    <section className="w-full scroll-container">
+    <section className="w-full">
       {/* Meet Product */}
       <ProductBlock
         title="Nunca mais perca um cliente."
@@ -378,7 +331,7 @@ export function AppleProductsSection() {
         mockup={<MeetMockup />}
       />
       {/* Transition 1 */}
-      <TransitionBlock text="Mas para crescer, você precisa de mais do que agendamentos." />
+      <TransitionBlock text="Quando sua agenda está cheia, você precisa de um atendente que nunca dorme." />
 
       {/* Connect Product */}
       <ProductBlock
@@ -390,8 +343,8 @@ export function AppleProductsSection() {
         mockup={<ConnectMockup />}
       />
 
-      {/* Transition 2 */}
-      <TransitionBlock text="E quando os leads chegam, você precisa de um vendedor que nunca para." />
+      {/* Transition 1 */}
+      <TransitionBlock text="Quando sua agenda está cheia, você precisa de um atendente que nunca dorme." />
 
       {/* Bot Product */}
       <ProductBlock
@@ -403,7 +356,7 @@ export function AppleProductsSection() {
         mockup={<BotMockup />}
       />
 
-      {/* Transition 3 */}
+      {/* Transition 2 */}
       <TransitionBlock text="E quando as vendas crescem, você precisa enxergar o todo." />
 
       {/* Board Product */}
