@@ -99,7 +99,14 @@ const nextConfig = {
 
   // Configurações de imagem
   images: {
-    domains: ['images.unsplash.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 31536000,
     dangerouslyAllowSVG: false,

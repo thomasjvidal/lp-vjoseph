@@ -49,7 +49,7 @@ export function ProductSection({
   // Configurações de animação baseadas em prefers-reduced-motion
   const animationConfig = {
     duration: prefersReducedMotion ? 0 : 0.3,
-    ease: prefersReducedMotion ? 'linear' : [0.25, 0.46, 0.45, 0.94] // iOS-like easing
+    ease: prefersReducedMotion ? 'linear' : 'easeOut' // iOS-like easing
   }
 
   // Variantes de animação para o conteúdo
@@ -65,7 +65,6 @@ export function ProductSection({
       scale: 1,
       transition: {
         duration: animationConfig.duration,
-        ease: animationConfig.ease,
         staggerChildren: prefersReducedMotion ? 0 : 0.1
       }
     }
