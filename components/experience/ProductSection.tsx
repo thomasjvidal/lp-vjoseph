@@ -79,8 +79,7 @@ export function ProductSection({
       opacity: 1,
       y: 0,
       transition: {
-        duration: animationConfig.duration,
-        ease: animationConfig.ease
+        duration: animationConfig.duration
       }
     }
   }
@@ -202,7 +201,6 @@ export function ProductSection({
         }}
         transition={{
           duration: animationConfig.duration,
-          ease: animationConfig.ease,
           y: {
             duration: prefersReducedMotion ? 0 : 2,
             repeat: prefersReducedMotion ? 0 : Infinity,

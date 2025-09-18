@@ -16,10 +16,6 @@ export default function ProdutosPage() {
       
       <SectionSnap
         className="relative"
-        onSectionChange={(index) => {
-          // Log para debug (pode ser removido em produção)
-          console.log(`Seção atual: ${index}`)
-        }}
       >
         {/* Seção 1: Joseph Bot */}
         <ProductSection

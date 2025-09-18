@@ -8,9 +8,10 @@ interface ProductBlockProps {
   ctaText: string
   ctaLink: string
   mockup: React.ReactNode
+  benefits?: string[]
 }
 
-function ProductBlock({ title, subtitle, description, ctaText, ctaLink, mockup }: ProductBlockProps) {
+function ProductBlock({ title, subtitle, description, ctaText, ctaLink, mockup, benefits }: ProductBlockProps) {
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-20 bg-background">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
@@ -27,6 +28,18 @@ function ProductBlock({ title, subtitle, description, ctaText, ctaLink, mockup }
               {description}
             </p>
           </div>
+          
+          {/* Benefits Section */}
+          {benefits && benefits.length > 0 && (
+            <div className="space-y-3">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
+                  <span className="text-base text-foreground font-medium">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          )}
           
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href={ctaLink}>
@@ -323,35 +336,50 @@ export function AppleProductsSection() {
     <section className="w-full">
       {/* Meet Product */}
       <ProductBlock
-        title="Nunca mais perca um cliente."
-        subtitle="Joseph Meet confirma, cobra e lembra seus clientes automaticamente."
-        description="Seu recepcionista que agenda, cobra e lembra. Comparecimento acima de 90% garantido."
-        ctaText="Ver demonstração do Meet"
+        title="Novos clientes, todos os dias."
+        subtitle="Encontra, conecta e abre portas. Sua marca presente onde importa."
+        description="Joseph Connect pesquisa, qualifica e inicia contatos com potenciais clientes em múltiplos canais. Ele não descansa até gerar novas conversas para o seu negócio."
+        benefits={[
+          "Leads prontos no seu painel",
+          "Conversas automáticas todos os dias",
+          "+40% de novos contatos em 30 dias"
+        ]}
+        ctaText="Quero ver Joseph Connect"
         ctaLink="/joseph/meet"
         mockup={<MeetMockup />}
       />
       {/* Transition 1 */}
-      <TransitionBlock text="Quando sua agenda está cheia, você precisa de um atendente que nunca dorme." />
+      <TransitionBlock text="Quando novos clientes chegam, o que mais querem é um jeito fácil de agendar com você." />
 
       {/* Connect Product */}
       <ProductBlock
-        title="Novos clientes, sempre."
-        subtitle="Ele encontra, conecta e abre portas. Sua marca presente onde importa."
-        description="Joseph Connect prospecta, conecta e qualifica leads automaticamente. Sua marca sempre presente nos lugares certos."
-        ctaText="Ativar Connect"
+        title="Sua agenda, sempre cheia."
+        subtitle="Joseph Meet elimina faltas, garante pagamentos antecipados e organiza sua agenda com horários disponíveis automaticamente."
+        description="Joseph Meet elimina faltas, garante pagamentos antecipados e organiza sua agenda com horários disponíveis automaticamente."
+        benefits={[
+          "90%+ comparecimento",
+          "Pagamento antecipado garantido",
+          "Faltas reduzidas em até 80%"
+        ]}
+        ctaText="Ativar Joseph Meet agora"
         ctaLink="/joseph/connect"
         mockup={<ConnectMockup />}
       />
 
       {/* Transition 1 */}
-      <TransitionBlock text="Quando sua agenda está cheia, você precisa de um atendente que nunca dorme." />
+      <TransitionBlock text="E quando sua agenda está cheia, você precisa de um atendente que nunca dorme." />
 
       {/* Bot Product */}
       <ProductBlock
-        title="Seu vendedor que nunca dorme."
-        subtitle="Capta, responde e fecha clientes. Mesmo de madrugada."
-        description="Atendimento 24h que responde, qualifica e agenda. Nunca perca uma oportunidade de venda."
-        ctaText="Ver o Bot em ação"
+        title="Seu atendente completo."
+        subtitle="Todo cliente que chega é recebido, entendido e direcionado em segundos."
+        description="Joseph Bot responde, entende, confirma pedidos, mostra produtos, acompanha entregas e fecha o ciclo pedindo feedback. Ele transforma cada conversa em uma experiência."
+        benefits={[
+          "Atendimento 24h/7d",
+          "Pedidos confirmados em segundos",
+          "Feedbacks que fidelizam clientes"
+        ]}
+        ctaText="Conhecer Joseph Bot"
         ctaLink="/joseph/bot"
         mockup={<BotMockup />}
       />
@@ -361,9 +389,14 @@ export function AppleProductsSection() {
 
       {/* Board Product */}
       <ProductBlock
-        title="Seus números, prontos. Sem pedir."
+        title="Seus números prontos. Sem pedir."
         subtitle="Relatórios automáticos, previsões simples, insights prontos."
-        description="Seu painel de gestão inteligente. Relatórios automáticos que chegam todo mês, sem esforço."
+        description="Joseph Board mostra receitas, comparativos e insights que indicam o próximo passo. Seu painel de gestão inteligente com relatórios automáticos que chegam todo mês."
+        benefits={[
+          "Relatórios automáticos mensais",
+          "Previsões claras de vendas em tempo real",
+          "Insights 3x mais rápidos para tomada de decisão"
+        ]}
         ctaText="Ver o Board"
         ctaLink="/joseph/board"
         mockup={<BoardMockup />}
