@@ -442,7 +442,7 @@ export function HeroSection() {
          Você no comando. Seu negócio funcionando 24 horas. 
         </h1>
         <p className="text-muted-foreground text-base md:text-base lg:text-lg font-medium leading-relaxed max-w-lg mx-auto">
-          Enquanto você cria, vive, cresce — Joseph trabalha e aumenta seu lucro.
+          Enquanto você cria, vive, cresce — Josephs trabalham e aumentam seu lucro.
         </p>
         <div className="flex justify-center pt-4">
           <Link href="https://vercel.com/home" target="_blank" rel="noopener noreferrer">

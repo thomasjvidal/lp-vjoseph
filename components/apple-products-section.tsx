@@ -334,52 +334,52 @@ function BoardMockup() {
 export function AppleProductsSection() {
   return (
     <section className="w-full">
-      {/* Meet Product */}
-      <ProductBlock
-        title="Novos clientes, todos os dias."
-        subtitle="Encontra, conecta e abre portas. Sua marca presente onde importa."
-        description="Joseph Connect pesquisa, qualifica e inicia contatos com potenciais clientes em múltiplos canais. Ele não descansa até gerar novas conversas para o seu negócio."
-        benefits={[
-          "Leads prontos no seu painel",
-          "Conversas automáticas todos os dias",
-          "+40% de novos contatos em 30 dias"
-        ]}
-        ctaText="Quero ver Joseph Connect"
-        ctaLink="/joseph/meet"
-        mockup={<MeetMockup />}
-      />
-      {/* Transition 1 */}
-      <TransitionBlock text="Quando novos clientes chegam, o que mais querem é um jeito fácil de agendar com você." />
-
       {/* Connect Product */}
       <ProductBlock
-        title="Sua agenda, sempre cheia."
-        subtitle="Joseph Meet elimina faltas, garante pagamentos antecipados e organiza sua agenda com horários disponíveis automaticamente."
-        description="Joseph Meet elimina faltas, garante pagamentos antecipados e organiza sua agenda com horários disponíveis automaticamente."
+        title="Clientes novos. Todos os dias."
+        subtitle="Enquanto você trabalha. Ele abre portas."
+        description="Com Joseph Connect, sua prospecção não para: ele busca, qualifica, inicia conversas e entrega contatos prontos direto no seu painel, 24h por dia."
         benefits={[
-          "90%+ comparecimento",
-          "Pagamento antecipado garantido",
-          "Faltas reduzidas em até 80%"
+          "+40% novos contatos em 30 dias",
+          "8h de prospecção poupadas por semana",
+          "3x mais conversas iniciadas automaticamente"
         ]}
-        ctaText="Ativar Joseph Meet agora"
+        ctaText="Quero conhecer o Connect"
         ctaLink="/joseph/connect"
         mockup={<ConnectMockup />}
       />
+      {/* Transition 1 */}
+      <TransitionBlock text="Quando novos contatos chegam, nada importa mais que facilitar o primeiro encontro." />
+
+      {/* Meet Product */}
+      <ProductBlock
+        title="Agenda confirmada. Pagamento garantido."
+        subtitle="Clientes marcam, pagam e recebem lembretes. Você só atende."
+        description="Joseph Meet agenda, confirma horários, reduz faltas, garante pagamentos antecipados e envia lembretes automáticos."
+        benefits={[
+          "+90% de comparecimento",
+          "Pagamento antecipado garantido",
+          "Faltas reduzidas em 80%"
+        ]}
+        ctaText="Quero ativar o Meet"
+        ctaLink="/joseph/meet"
+        mockup={<MeetMockup />}
+      />
 
       {/* Transition 1 */}
-      <TransitionBlock text="E quando sua agenda está cheia, você precisa de um atendente que nunca dorme." />
+      <TransitionBlock text="Quando sua agenda está cheia, você precisa de um atendente que nunca dorme." />
 
       {/* Bot Product */}
       <ProductBlock
         title="Seu atendente completo."
         subtitle="Todo cliente que chega é recebido, entendido e direcionado em segundos."
-        description="Joseph Bot responde, entende, confirma pedidos, mostra produtos, acompanha entregas e fecha o ciclo pedindo feedback. Ele transforma cada conversa em uma experiência."
+        description="Joseph Bot recebe, responde, mostra seus produtos, confirma pedidos e fecha o ciclo pedindo feedback."
         benefits={[
-          "Atendimento 24h/7d",
-          "Pedidos confirmados em segundos",
-          "Feedbacks que fidelizam clientes"
+          "Atendimento contínuo 24/7",
+          "70% das primeiras conversas viram vendas",
+          "Feedback coletado em 90% dos atendimentos"
         ]}
-        ctaText="Conhecer Joseph Bot"
+        ctaText="Ver Joseph Bot"
         ctaLink="/joseph/bot"
         mockup={<BotMockup />}
       />
@@ -394,8 +394,8 @@ export function AppleProductsSection() {
         description="Joseph Board mostra receitas, comparativos e insights que indicam o próximo passo. Seu painel de gestão inteligente com relatórios automáticos que chegam todo mês."
         benefits={[
           "Relatórios automáticos mensais",
-          "Previsões claras de vendas em tempo real",
-          "Insights 3x mais rápidos para tomada de decisão"
+          "Previsões claras em tempo real",
+          "Insights 3x mais rápidos para tomadas de decisão"
         ]}
         ctaText="Ver o Board"
         ctaLink="/joseph/board"

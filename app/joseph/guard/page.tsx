@@ -183,10 +183,10 @@ export default function JosephGuardPage() {
         interactiveElement={
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[1,2,3,4].map((i) => (
-              <div key={i} className="bg-white rounded-lg p-4 shadow-lg text-center">
+              <div key={i} className="bg-card border border-border rounded-lg p-4 shadow-lg text-center">
                 <div className="w-12 h-12 bg-primary/20 rounded-full mx-auto mb-2" />
-                <p className="text-sm font-medium">Startup {i}</p>
-                <p className="text-xs text-muted-foreground">99.9% uptime</p>
+                <p className="text-sm font-medium text-foreground">Startup {i}</p>
+                <p className="text-xs text-foreground/70">99.9% uptime</p>
               </div>
             ))}
           </div>

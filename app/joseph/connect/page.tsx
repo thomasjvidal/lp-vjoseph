@@ -105,29 +105,29 @@ export default function JosephConnectPage() {
 
   const integrationVisual = (
     <div className="grid grid-cols-2 gap-4">
-      <div className="bg-white rounded-lg p-4 shadow-lg text-center">
+      <div className="bg-card border border-border rounded-lg p-4 shadow-lg text-center">
         <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mx-auto mb-2">
           <span className="text-white font-bold">IG</span>
         </div>
-        <p className="text-sm font-semibold">Instagram</p>
+        <p className="text-sm font-semibold text-foreground">Instagram</p>
       </div>
-      <div className="bg-white rounded-lg p-4 shadow-lg text-center">
+      <div className="bg-card border border-border rounded-lg p-4 shadow-lg text-center">
         <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mx-auto mb-2">
           <span className="text-white font-bold">LI</span>
         </div>
-        <p className="text-sm font-semibold">LinkedIn</p>
+        <p className="text-sm font-semibold text-foreground">LinkedIn</p>
       </div>
-      <div className="bg-white rounded-lg p-4 shadow-lg text-center">
+      <div className="bg-card border border-border rounded-lg p-4 shadow-lg text-center">
         <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-2">
           <span className="text-white font-bold">WA</span>
         </div>
-        <p className="text-sm font-semibold">WhatsApp</p>
+        <p className="text-sm font-semibold text-foreground">WhatsApp</p>
       </div>
-      <div className="bg-white rounded-lg p-4 shadow-lg text-center">
+      <div className="bg-card border border-border rounded-lg p-4 shadow-lg text-center">
         <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mx-auto mb-2">
           <span className="text-white font-bold">CRM</span>
         </div>
-        <p className="text-sm font-semibold">CRM</p>
+        <p className="text-sm font-semibold text-foreground">CRM</p>
       </div>
     </div>
   )
